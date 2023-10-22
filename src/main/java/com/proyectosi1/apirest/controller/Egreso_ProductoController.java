@@ -1,8 +1,15 @@
+/*package com.proyectosi1.apirest.controller;
+
+public class Egreso_ProductoController {
+    
+}*/
 package com.proyectosi1.apirest.controller;
 
 import com.proyectosi1.apirest.entity.CategoryEntity;
 
 import com.proyectosi1.apirest.service.CategoryService;
+import com.proyectosi1.apirest.service.Egreso_ProductoService;
+
 import lombok.RequiredArgsConstructor;
 
 import java.util.List;
@@ -10,11 +17,11 @@ import java.util.List;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/category")
+@RequestMapping("/Egreso_Producto")
 @RequiredArgsConstructor
-public class CategoryController {
-    private final CategoryService categoryService;
-
+public class Egreso_ProductoController {
+    private final Egreso_ProductoService egreso_ProductoService;
+    /* 
     @PostMapping
     public CategoryEntity createCategory(@RequestBody CategoryEntity category) {
         return categoryService.createCategory(category);
@@ -39,5 +46,6 @@ public class CategoryController {
     @GetMapping
     public List<CategoryEntity> getAllCategory() {
         return categoryService.getAllCategories();
-    }
+    }*/
 }
+
