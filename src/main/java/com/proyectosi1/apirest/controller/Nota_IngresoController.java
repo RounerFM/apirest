@@ -1,8 +1,8 @@
 package com.proyectosi1.apirest.controller;
 
-import com.proyectosi1.apirest.entity.Ingreso_ProductoEntity;
+import com.proyectosi1.apirest.entity.Nota_IngresoEntity;
 
-import com.proyectosi1.apirest.service.Ingreso_ProductoService;
+import com.proyectosi1.apirest.service.Nota_IngresoService;
 
 import lombok.RequiredArgsConstructor;
 
@@ -14,32 +14,32 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/Nota_Ingreso")
 @RequiredArgsConstructor
 public class Nota_IngresoController {
-    private final Ingreso_ProductoService ingreso_ProductoService;
+    private final Nota_IngresoService nota_IngresoService;
     
     @PostMapping
-    public Ingreso_ProductoEntity createIngreso_Producto(@RequestBody Ingreso_ProductoEntity ingreso_Producto) {
-        return ingreso_ProductoService.createIngreso_Producto(ingreso_Producto);
+    public Nota_IngresoEntity createNota_Ingreso(@RequestBody Nota_IngresoEntity nota_Ingreso) {
+        return nota_IngresoService.createNota_Ingreso(nota_Ingreso);
     }
 
     @PutMapping("/{id}")
-    public Ingreso_ProductoEntity updateIngreso_Producto(@PathVariable Integer id, @RequestBody Ingreso_ProductoEntity ingreso_Producto) {
-        ingreso_Producto.setId(id);
-        return ingreso_ProductoService.updateIngreso_Producto(ingreso_Producto);
+    public Nota_IngresoEntity updateNota_Ingreso(@PathVariable Integer id, @RequestBody Nota_IngresoEntity nota_Ingreso) {
+        nota_Ingreso.setId(id);
+        return nota_IngresoService.updateNota_Ingreso(nota_Ingreso);
     }
 
     @DeleteMapping("/{id}")
-    public void deleteIngreso_Producto(@PathVariable Integer id) {
-        ingreso_ProductoService.deleteIngreso_Producto(id);
+    public void deleteNota_Ingreso(@PathVariable Integer id) {
+        nota_IngresoService.deleteNota_Ingreso(id);
     }
 
     @GetMapping("/{id}")
-    public Ingreso_ProductoEntity getIngreso_Producto(@PathVariable Integer id) {
-        return ingreso_ProductoService.getIngreso_Producto(id);
+    public Nota_IngresoEntity getNota_Ingreso(@PathVariable Integer id) {
+        return nota_IngresoService.getNota_Ingreso(id);
     }
 
     @GetMapping
-    public List<Ingreso_ProductoEntity> getAllIngreso_Producto() {
-        return ingreso_ProductoService.getAllIngreso_Productos();
+    public List<Nota_IngresoEntity> getAllNota_Ingreso() {
+        return nota_IngresoService.getAllNota_Ingreso();
     }
 }
 

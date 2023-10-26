@@ -1,5 +1,7 @@
 package com.proyectosi1.apirest.entity;
 
+import java.util.Date;
+
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -14,10 +16,11 @@ import lombok.NoArgsConstructor;
 @Table (name = "NOTA_INGRESO")
 public class Nota_IngresoEntity {
     @Id
+    @GeneratedValue
     private int id;
 
-    private String descripvion;
-    private String fecha;   //esto no deveria ser tipo fecha?
+    private String descripcion;
+    private Date fecha;   
     private int cantidad_total;
 
 }

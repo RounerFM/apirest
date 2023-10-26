@@ -14,14 +14,13 @@ import lombok.NoArgsConstructor;
 @Table (name = "EGRESO_PRODUCTO")
 public class Egreso_ProductoEntity {
     @Id
+    @GeneratedValue
     private Integer id;
 
 
     private Integer cantidad;
     private String talla;
 
-    @ManyToOne
-    @JoinColumn(name = "id_nota_egreso")
-    private Nota_EgresoEntity id_nota_egreso;
+ 
         
 }

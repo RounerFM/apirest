@@ -14,6 +14,7 @@ import lombok.NoArgsConstructor;
 @Table (name = "INGRESO_PRODUCTO")
 public class Ingreso_ProductoEntity {
     @Id
+    @GeneratedValue
     private Integer id;
 
 
