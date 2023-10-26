@@ -19,4 +19,9 @@ public class Egreso_ProductoEntity {
 
     private Integer cantidad;
     private String talla;
+
+    @ManyToOne
+    @JoinColumn(name = "id_nota_egreso")
+    private Nota_EgresoEntity id_nota_egreso;
+        
 }

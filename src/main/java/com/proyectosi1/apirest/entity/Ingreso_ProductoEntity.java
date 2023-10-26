@@ -19,4 +19,9 @@ public class Ingreso_ProductoEntity {
 
     private Integer cantidad;
     private String talla;
+
+    @ManyToOne
+    @JoinColumn(name = "id_nota_Ingreso")
+    private Nota_IngresoEntity id_nota_ingreso;
+
 }

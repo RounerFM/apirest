@@ -17,27 +17,27 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 @Service
 public class Nota_IngresoService {
-    private final Nota_IngresoRepository nota_IngresoService;
+    private final Nota_IngresoRepository nota_IngresoRepository;
 
-    public Nota_IngresoEntity crearNota_Ingreso(Nota_IngresoEntity nota_ingreso){
-        return nota_IngresoService.save(nota_ingreso);
+    public Nota_IngresoEntity createNota_Ingreso(Nota_IngresoEntity nota_ingreso){
+        return nota_IngresoRepository.save(nota_ingreso);
     }
 
     // Actualiza un registro de Nota_Egreso en la base de datos
     public Nota_IngresoEntity updateNota_Ingreso(Nota_IngresoEntity nota_ingreso) {
-        return nota_IngresoService.save((nota_ingreso));
+        return nota_IngresoRepository.save((nota_ingreso));
     }
 
     public void deleteNota_Ingreso(Integer id) {
-        nota_IngresoService.deleteById(id);
+        nota_IngresoRepository.deleteById(id);
     }
 
     public Nota_IngresoEntity getNota_Ingreso(Integer id) {
-        return nota_IngresoService.findById(id).orElse(null);
+        return nota_IngresoRepository.findById(id).orElse(null);
     }
 
     public List<Nota_IngresoEntity> getAllNota_Ingreso() {
-        return nota_IngresoService.findAll();
+        return nota_IngresoRepository.findAll();
     }
 
 }

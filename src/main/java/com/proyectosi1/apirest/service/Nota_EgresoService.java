@@ -17,27 +17,27 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 @Service
 public class Nota_EgresoService {
-    private final Nota_EgresoRepository nota_EgresoService;
+    private final Nota_EgresoRepository nota_EgresoRepository;
 
-    public Nota_EgresoEntity crearNota_Egreso(Nota_EgresoEntity nota_egreso){
-        return nota_EgresoService.save(nota_egreso);
+    public Nota_EgresoEntity createNota_Egreso(Nota_EgresoEntity nota_egreso){
+        return nota_EgresoRepository.save(nota_egreso);
     }
 
     // Actualiza un registro de Nota_Egreso en la base de datos
     public Nota_EgresoEntity updateNota_Egreso(Nota_EgresoEntity nota_egreso) {
-        return nota_EgresoService.save((nota_egreso));
+        return nota_EgresoRepository.save((nota_egreso));
     }
 
     public void deleteNota_Egreso(Integer id) {
-        nota_EgresoService.deleteById(id);
+        nota_EgresoRepository.deleteById(id);
     }
 
     public Nota_EgresoEntity getNota_Egreso(Integer id) {
-        return nota_EgresoService.findById(id).orElse(null);
+        return nota_EgresoRepository.findById(id).orElse(null);
     }
 
     public List<Nota_EgresoEntity> getAllNota_Egreso() {
-        return nota_EgresoService.findAll();
+        return nota_EgresoRepository.findAll();
     }
 
 }

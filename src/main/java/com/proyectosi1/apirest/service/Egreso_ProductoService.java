@@ -14,7 +14,7 @@ import lombok.RequiredArgsConstructor;
 public class Egreso_ProductoService {
     private final Egreso_ProductoRepository egreso_ProductoRepository;
 
-    public Egreso_ProductoEntity crearEgreso_Producto(Egreso_ProductoEntity egreso_Producto){
+    public Egreso_ProductoEntity createEgreso_Producto(Egreso_ProductoEntity egreso_Producto){
         return egreso_ProductoRepository.save(egreso_Producto);
     }
 
